@@ -1,0 +1,189 @@
+<!--
+1  <!DOCTYPE html>  
+2  <html lang="en">  
+3  <head>  
+4  <meta charset="utf-8">  
+5  <title>Course Feedback</title> 
+6  </head> 
+7  <body>  
+8  <header>
+9      <h1>CSF3133 Course Feedback</h1> 
+10  </head> 
+11  <nav> 
+12      <a href="#results">Results</a> | <a href="#form">Feedback Form</a> 
+13  </nav> 
+14  <section id="results"> 
+15      <h2>Feedback Summary</h2> 
+16      <table border="1"> 
+17          <tr> 
+18              <th>Week</th> 
+19              <th>Topic</th> 
+20              <td>Rating</td> 
+21          </tr> 
+22          <tr> 
+23              <td>1</td> 
+24              <td>Introduction to HTML</td> 
+25              <td>4.5</td> 
+26          </tr> 
+27          <tr> 
+28              <td>2</td> 
+29              <td colspan="3">Tables and Forms</td> 
+30          </tr> 
+31          <tr> 
+32              <td>3</td> 
+33              <td>Semantic HTML</td> 
+34              <td>4.0</td> 
+35          </tr> 
+36      </table> 
+37  </section> 
+38  <section id="form"> 
+39      <h2>Give Your Feedback</h2> 
+40      <form action="submit_feedback.php" method="post"> 
+41          <label for="name">Name:</label> 
+42          <input type="text" id="fullname" name="name"><br> 
+43          <label>Overall rating:</label><br> 
+44          <input type="radio" id="good" name="good" value="good"> 
+45          <label for="good">Good</label> 
+46          <input type="radio" id="poor" name="poor" value="poor"> 
+47          <label for="poor">Poor</label><br> 
+48          <input type="checkbox" id="lab" name="lab" value="yes"> 
+49          <label for="labs">I attended all labs</label><br> 
+50          <input type="submit" value="Submit"> 
+51      </form> 
+52  </section> 
+53  <footer> 
+54      <p>Copyright &copy; 2026 CSF3133</p> 
+55  </footer> 
+56  </body> 
+57  </html> -->
+
+<!--Error 1(line 10): Wrong closing tag for header-->
+<!--Error 2(line 20): Using <td> instead of <th> for header cell-->
+<!--Error 3(line 26): Missing closing tag for <tr>-->
+<!--Error 4(line 28): Wrong colspan value-->
+<!--Error 5(line 40): label for does not match input id="fullname">-->
+<!--Error 6(line 42 and 44): radio button name does not match label-->
+<!--Error 7(line 49): </from> should be </form>-->
+<!--Error 8(line 52): &copy is missing semicolon-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Course Feedback</title>
+    </head>
+    <body>
+        <header>
+            <h1>CSF3133 Course Feedback</h1>
+        </header>
+
+        <nav>
+            <a href="#results">Results</a> | <a href="#form">Feedback Form</a>
+        </nav>
+
+        <section id="results">
+            <h2>Feedback Summary</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <th>Rating</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tables and Forms</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Semantic HTML</td>
+                    <td>4.0</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td rowspan="2">Mini Project</td>
+                    <td>4.6</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>4.4</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">Average Rating</td>
+                    <td>4.34</td>
+                </tr>
+
+            </table>
+        </section>
+
+        <section id="form">
+            <h2>Give Your Feedback</h2>
+            <form action="submit_feedback.php" method="post">
+
+                <label for="fullname">Name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br><br>
+
+                <!--add email field-->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <!--Rating-->
+                <label for="rating">Overall rating:</label><br>
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Good</label><br>
+
+                <input type="radio" id="average" name="rating" value="average">
+                <label for="average">Average</label><br>
+
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="poor">Poor</label><br><br>
+
+                <input type="checkbox" id="lab" name="lab" value="yes">
+                <label for="lab">I attended all labs</label><br><br>
+
+                <!--Topic I want to practice more-->
+                <input type="checkbox" id="topic1" name="topic1" value="HTML">
+                <label for="topic1">HTML</label><br>
+
+                <input type="checkbox" id="topic2" name="topic2" value="Tables and forms">
+                <label for="topic2">Tables and forms</label><br>
+
+                <input type="checkbox" id="topic3" name="topic3" value="Semantic HTML">
+                <label for="topic3">Semantic HTML</label><br><br>
+
+                <!--submit button-->
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <!--comments session-->
+        <section id="comments">
+            <h2>Student Comments</h2>
+
+            <article>
+                <h3>Ali Tahir</h3>
+                <p>I found the course very informative and well-structured. The labs were particularly helpful in reinforcing the concepts taught in class.</p>
+            </article>
+
+            <article>
+                <h3>Izzah Natasya</h3>
+                <p>I would like to practice more with semantic HTML</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Copyright &copy; 2026 CSF3133</p>
+        </footer>
+
+    </body
+</html>

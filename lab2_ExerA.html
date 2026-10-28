@@ -1,0 +1,158 @@
+<!DOCTYPE html>>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Faculty Event Page</title>
+    </head>
+    <body>
+
+        <!-- Header section -->
+        <header>
+            <h1>Faculty Programming Workshop</h1>
+            <p>Code, code and code!</p>
+        </header>
+
+        <!-- Navigation Links-->
+        <nav>
+            <a href="#about">About the Event</a> | <a href="#schedule">Event Schedule</a> | <a href="#register">Registration</a>
+        </nav>
+
+
+        <!-- Section 1: About the Event Section -->
+        <section id="about">
+            <h2>About the Event</h2>
+            <p>Welcome to the Faculty Programming Workshop! This event is designed to help faculty members enhance their programming skills 
+                and stay updated with the latest developments in software development.</p>
+            
+            <!--Article:Speaker Information-->
+            <article>
+                <h3>Featured Speakers: Dr ALi Halim</h3>
+                <p>Dr Ali is an industry experts and academics who will share their knowledge and insights about coding and programming.</p>
+            </article>
+
+            <!--Article2: Activity Information-->
+            <article>
+                <h3>Workshop Activities with Dr Adam</h3>
+                <p>Participants will engage in hands-on coding sessions, group discussions, and interactive demonstrations to deepen their understanding of programming concepts.</p>
+            </article>
+        </section>
+
+        <!-- Section 2: Event Schedule Section -->
+        <section id="schedule">
+            <h2>Event Schedule</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person In Charge</th>
+                </tr>
+                
+                <tr>
+                    <td>8:00 AM - 9:00 AM</td>
+                    <td>Registration</td>
+                    <td rowspan="2">DSJ</td>
+                    <td>Registration Team</td>
+                </tr>
+                <tr>
+                    <td>9:00 AM - 10:00 AM</td>
+                    <td>Opening Ceremony</td>
+                    <td>Event Organizer</td>
+                </tr>
+
+                <tr>
+                    <td>10:00 AM - 12:00 PM</td>
+                    <td>Talk: All About Programming</td>
+                    <td>BYOD 1</td>
+                    <td>Dr. Ali Halim</td>
+                </tr>
+
+                <tr>
+                    <td>12:00 PM - 1:00 PM</td>
+                    <td colspan="3">Lunch Break</td>
+                </tr>
+
+                <tr>
+                    <td>1:00 PM - 3:00 PM</td>
+                    <td>Workshop Activities with Dr. Adam</td>
+                    <td>BYOD 2</td>
+                    <td>Dr. Adam</td>
+                </tr>
+
+                <tr>
+                    <td>3:00 PM - 4:00 PM</td>
+                    <td>Closing Ceremony</td>
+                    <td>DSJ</td>
+                    <td>Event Organizer</td>
+                </tr>
+
+            </table>
+            
+        </section>
+
+        <!-- Section 3: Registration Section -->
+        <section id="register">
+            <h2>Registration</h2>
+            <p>To register for the Faculty Programming Workshop, please fill out the registration form below:</p>
+
+            <!-- Registration form would go here -->
+            <form action="submit_form.php" method="post">
+
+            <!--Personal Information-->
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br><br>
+
+            <label for="matricno">Matric Number:</label><br>
+            <input type="text" id="matricno" name="matricno"><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!--Year of Study-->
+            <label for="year">Year of Study:</label><br>
+            <input type="radio" id="year1" name="year" value="year1">
+            <label for="year1">Year 1</label><br>
+
+            <input type="radio" id="year2" name="year" value="year2">
+            <label for="year2">Year 2</label><br>
+
+            <input type="radio" id="year3" name="year" value="year3">
+            <label for="year3">Year 3</label><br>
+
+            <input type="radio" id="year4" name="year" value="year4">
+            <label for="year4">Year 4</label><br><br>
+
+            <!--Selected Session-->
+
+            <label for="session">Selected Session: </label><br>
+
+            <input type="checkbox" id="session1" name="session1" value="Talk: All About Programming">
+            <label for="session1">Talk: All About Programming</label><br>
+
+            <input type="checkbox" id="session2" name="session2" value="Workshop Activities with Dr. Adam">
+            <label for="session2">Workshop Activities with Dr. Adam</label><br>
+
+            <input type="checkbox" id="session3" name="session3" value="Closing Ceremony">
+            <label for="session3">Closing Ceremony</label><br><br>
+
+            <!--List of programmes-->
+            <label for="programme">Selected Programme:</label><br>
+            <select id="programme" name="programme">
+                <option value="programme1">Informatic Maritime</option>
+                <option value="programme2">Software Engineering</option>
+                <option value="programme3">Mobile Computing</option>
+                <option value="programme4">Data Analytics</option>
+            </select><br><br>
+
+            <!--Submit Button-->
+            <input type="submit" value="Register">
+            </form>
+        </section>
+    </body>
+
+    <footer>
+        <p>&copy; 2026 Faculty Programming Workshop. All rights reserved.</p>
+    </footer>
+</html>
