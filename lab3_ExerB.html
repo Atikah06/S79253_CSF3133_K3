@@ -1,0 +1,167 @@
+<!--
+ 1  <!DOCTYPE>  
+ 2  <html lang="en">  
+ 3  <head>  
+ 4      <meta charset="utf-8"> 
+ 5      <title>Ticket Booking</title> 
+ 6  </head>
+ 7  <body>  
+ 8  <div id="header"> 
+ 9      <h1>e-Ticket <span>Your Campus Cinema</h1></span>
+ 10  </div>
+ 11  <span id="content">
+ 12      <h2>Book Your Ticket</h2> 
+ 13      <p>Promotion: tickets < RM10 for students &amp staff!</p> 
+ 14      <form action="booking.php" oninput="total.value = adult.value + child.value"> 
+ 15          <label for="name">Name:</label>
+ 16          <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+ 17          <label for="email">E-mail:</label>
+ 18          <input type="emial" id="email" name="email"><br>
+ 19          <label for="date">Show date:</label>
+ 20          <input type="date" id="date" name="date"><br>
+ 21          <label for="movie">Movie:</label>
+ 22          <input id="movie" name="movie" list="movies"><br>
+ 23          <datalist id="movielist">
+ 24              <option value="Space Rangers"> 
+ 25              <option value="Kampung Comedy">
+ 26          </datalist>
+ 27          <label for="adult">Adult tickets:</label>
+ 28          <input type="number" id="adult" name="adult" value="0"><br>
+ 29          <label for="child">Child tickets:</label>
+ 30          <input type="number" id="child" name="child" value="0"><br>
+ 31          <label for="rating">Rate our service:</label>
+ 32          <input type="range" id="rating" name="rating" min="5" max="1"><br>
+ 33          Total tickets: <output name="total" for="adult kid"></output><br>
+ 34          <input type="submit" value="Book Now">
+ 35      </form>
+ 36  </span>
+ 37  <div id="footer">
+ 38      <p>&Copy; 2026 CineKampus. All rights reserved.</p> 
+ 39  </div> 
+ 40  </body> 
+ 41  </html>
+ 54  </body>	
+ 55  </html>	
+ -->
+ 
+ <!--Error 1 (line 1): Missing html in DOCTYPE declaration-->
+ <!--Error 2 (line 9): Incorrect closing position for h1 and span-->
+ <!--Error 3 (line 11): Using span instead of div for content section-->
+ <!--Error 4 (line 13): Used &amp; instead of &-->
+ <!--Error 5 (line 14): Used + which joins values as text instead of adding numbers-->
+ <!--Error 6 (line 18): Used "emial" instead of "email"-->
+ <!--Error 7 (line 18): Email input is missing required attribute "required"-->
+ <!--Error 8 (line 22-23): Datalist ID does not match with the input list attribute-->
+ <!--Error 9 (line32): Range input has min and max values in wrong order-->
+ <!--Error 10 (line 33): Output for attribute uses incorrect ID kid instead of child-->
+ <!--Error 11 (line 38): Incorrect copyright symbol used-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Ticket Booking</title>
+    </head>
+    <body>
+    <div id="header">
+        <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+    </div>
+
+    <div id="content">
+        <h2>Book Your Ticket</h2>
+        <p>Promotion: tickets < RM10 for students & staff!</p>
+
+        <form oninput="
+        total.value = parseInt(adult.value)+parseInt(child.value);
+        totalPrice.value = (parseInt(adult.value)*10)+(parseInt(child.value)*5);
+        ">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+
+            <!--new phone number input-->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+
+            <label for="date">Show date:</label>
+            <input type="date" id="date" name="date"><br><br>
+
+
+            <!--New time input-->
+            <label for="time">Show time:</label>
+            <input type="time" id="time" name="time"><br><br>
+
+            <label for="movie">Movie:</label>
+            <input id="movie" name="movie" list="movielist"><br><br>
+
+
+            <datalist id="movielist">
+                <option value="Space Rangers">
+                <option value="Kampung Comedy">
+                <option value="The Great Adventure">
+            </datalist>
+
+            <label for="adult">Adult tickets:</label>
+            <input type="number" id="adult" name="adult" value="0"><br><br>
+
+
+            <label for="child">Child tickets:</label>
+            <input type="number" id="child" name="child" value="0"><br><br>
+
+            <p>
+                Total tickets: <output name="total" for="adult child">0</output><br><br>
+
+            </p>
+
+            <!--Total price calculation-->
+            <p>
+                Total price: RM <output name="totalPrice" for="adult child">0</output><br><br>
+
+            </p>
+
+            <label for="rating">Rate our service:</label>
+            <input type="range" id="rating" name="rating" min="1" max="5"><br><br>
+
+            <input type="submit" value="Book Now">
+
+        </form>
+
+        <!--sidebar now showing-->
+        <div id="sidebar">
+            <h3>Now Showing</h3>
+        <ul>
+            <li>
+                <strong>Space Rangers</strong>
+                <span>(PG)</span>
+                <a href="https://www.youtube.com/watch?v=Space-Rangers" target="_blank">Watch Trailer</a>
+            </li>
+
+            <li>
+                <strong>Kampung Comedy</strong>
+                <span>(PG-13)</span>
+                <a href="https://www.youtube.com/watch?v=Kampung-Comedy" target="_blank">Watch Trailer</a>
+            </li>
+
+            <li>
+                <strong>The Great Adventure</strong>
+                <span>(PG)</span>
+                <a href="https://www.youtube.com/watch?v=The-Great-Adventure" target="_blank">Watch Trailer</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div id="footer">
+        <p>e-Ticket &reg; &ndash; Campus Cinema &lt; RM10 off every Tuesday</p>
+
+        <p>&copy; 2023 CineKampus. All rights reserved.</p>
+    </div>
+</body>
+</html>
