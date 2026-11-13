@@ -1,0 +1,250 @@
+<!--
+1  <!DOCTYPE html>  
+2  <html lang="en">  
+3  <head> 
+4      <meta charset="utf-8">  
+5      <title>e-Café Campus</title>  
+6      <style type="text/css">  
+7      --Navigation bar--
+8      ul {  
+9          list-style-type: no; 
+10          margin: 0; 
+11          padding: 0; 
+12      } 
+13      a:link {color: #1A5276;} 
+14      a:hover {color: #E67E22;} 
+15      a:visited {color: #7D3C98;} 
+16      a:active {color: #C0392B;} 
+17      h1 {text-decoration: overlined;} 
+18      p {color #333333; text-align: justify;} 
+19      #intro { 
+20          font-size: 18px; 
+21          background-color: #FDEBD0; 
+22      highlight { 
+23          font-weight: bold; 
+24          color: #C0392B; 
+25      } 
+26      </style> 
+27  </head> 
+28  <body> 
+29  <header> 
+30      <h1>e-Café Campus</h1> 
+31  </header> 
+32  <nav> 
+33      <ul> 
+34          <li><a href="menu">Menu</a></li> 
+35          <li><a href="#video">Video</a></li> 
+36          <li><a href="#contact">Contact</a></li> 
+37      </ul> 
+38  </nav> 
+39  <section id="menu"> 
+40      <h2>Today's Menu</h2> 
+41      <p class="intro">Freshly brewed coffee and local delights every day.</p> 
+42      <article id="item"> 
+43          <h3>Kopi Tarik</h3> 
+44          <p>Only <span class="highlight">RM 3.50</span></p> 
+45      </article> 
+46      <article id="item"> 
+47          <h3>Nasi Lemak</h3> 
+48          <p>Only <span class="highlight">RM 5.00</span></p> 
+49      </article> 
+50  </section> 
+51  <section id="video"> 
+52      <h2>Watch Our Story</h2>
+53      <video width="400" height="300"> 
+54          <source src="cafe.mp4" type="mp4"> 
+55          Your browser does not support the video tag. 
+56      </video> 
+57  </section> 
+58  <footer id="contact"> 
+59      <p>&copy; 2026 e-Café Campus</p> 
+60  </footer> 
+61  </body> 
+62  </html> -->
+
+<!--Error 1 (Line 9): list-style-type: no changed to none-->
+<!--Error 2 (line 14-15): Link stated changed to correct order-->
+<!--Error 3 (line 17): oberlined change to overline-->
+<!--Error 4 (line 18): missing colon after color-->
+<!--Error 5 (line 20: #intro changed to .intro)-->
+<!--Error 6 (line 21-22): misssing closing brace and dot before highlight-->
+<!--Error 7 (line 34): href='menu' changed to href="#menu"-->
+<!--Error 8 (line 46): duplicate id='item'-->
+<!--Error 9 (line 53): controls attribute added-->
+<!--Error 10 (line 54): source type changed to video/mp4-->
+<!--Error 11: Navigation CSS need to move to external stylesheet-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>e-Cafe Campus</title>
+
+        <!--External CSS-->
+        <link rel="stylesheet" href="cafe.css">
+
+        <!--Internal CSS-->
+        <style>
+            
+            h1{
+                text-decoration: overline;
+            }
+
+            p {
+                color: #333333;
+                text-align: justify;
+            }
+
+            .intro {
+                font-size: 18px;
+                background-color: #C0392B;
+            }
+
+            .highlight {
+                font-weight: bold;
+                color: #C0392B;
+            }
+
+            h2 {
+                text-decoration: underline;
+            }
+
+            video {
+                max-width: 100%;
+                height: auto;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header>
+            <h1>e-Café Campus</h1>
+            <p>Fresh food and drinks for everyone.</p>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </body>
+
+    <main>
+
+        <!-- Menu Section -->
+        <section id="menu">
+
+            <h2>Today's Menu</h2>
+
+            <p class="intro">
+                Freshly brewed coffee and local delights every day.
+            </p>
+
+            <article class="menu-item">
+                <h3>Kopi Tarik</h3>
+
+                <p>
+                    Only
+                    <span class="old-price">RM 4.50</span>
+                    <span class="highlight">RM 3.50</span>
+                </p>
+            </article>
+
+            <article class="menu-item">
+                <h3>Nasi Lemak</h3>
+
+                <p>
+                    Only
+                    <span class="old-price">RM 6.50</span>
+                    <span class="highlight">RM 5.00</span>
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Video Section -->
+        <section id="video">
+
+            <h2>Watch Our Story</h2>
+
+            <figure>
+                <video width="400" height="300" controls>
+
+                    <source src="cafe.mp4" type="video/mp4">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+                <figcaption>
+                    Welcome to e-Café Campus!
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback">
+
+            <h2>Customer Feedback</h2>
+
+            <form class="feedback-form">
+
+                <label for="customer-name">Name:</label>
+                <input type="text" id="customer-name" name="name" required>
+
+                <label for="customer-email">E-mail:</label>
+                <input type="email" id="customer-email" name="email" required>
+
+                <p>Visit Type:</p>
+
+                <input type="radio" name="visit" value="Dine-in">
+                Dine-in
+
+                <input type="radio" name="visit" value="Take-away">
+                Take-away
+
+                <p>Favourite Items:</p>
+
+                <input type="checkbox" name="favourite" value="Kopi Tarik">
+                Kopi Tarik
+
+                <input type="checkbox" name="favourite" value="Nasi Lemak">
+                Nasi Lemak
+
+                <input type="checkbox" name="favourite" value="Sandwich">
+                Sandwich
+
+                <br><br>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer id="contact">
+
+        <p>&copy; 2026 e-Café Campus</p>
+
+        <address>
+            Contact:
+            <a href="mailto:ecafe@example.com">
+                ecafe@example.com
+            </a>
+        </address>
+
+    </footer>
+    
