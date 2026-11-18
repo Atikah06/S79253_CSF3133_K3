@@ -1,0 +1,169 @@
+<!--
+1 <!DOCTYPE html> 
+2 <html lang="en"> 
+3 <head> 
+4 <meta charset="utf-8"> 
+5 <title>Campus Bookstore</title> 
+6 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+7 <link rel="stylesheets" href="shop.css"> 
+8 </head> 
+9 <body> 
+10 <style> 
+11 h1 { text-align: center; } 
+12 </style> 
+13 <ul> 
+14 <li><a href="#home">Home</a></li> 
+15 <li><a href="#books">Books</a></li> 
+16 <li><a href="#contact">Contact</a></li> 
+17 </ul> 
+18 <h1 style="color=#1B4F72;">Campus Bookstore</h1> 
+19 <p>Textbooks, stationery and more for every student.</p> 
+20 <table id="product"> 
+21 <tr><th>Item</th><th>Category</th><th>Price (RM)</th></tr> 
+22 <tr><td>Web Design Basics</td><td>Textbook</td><td>45.00</td></tr> 
+23 <tr><td>A4 Notebook</td><td>Stationery</td><td>6.50</td></tr> 
+24 <tr><td>USB Drive 32GB</td><td>Gadget</td><td>25.00</td></tr> 
+25 <tr><td>Highlighter Set</td><td>Stationery</td><td>9.90</td></tr> 
+26 </table> 
+27 <footer>&copy; 2026 Campus Bookstore</footer> 
+28 </body> 
+29 </html>
+-->
+
+<!--1 body { 
+2 font-family: 'Robotto', sans-serif; 
+3 background-image: url("paper.gif"); 
+4 background-repeat: no repeat; 
+5 bacground-position: right top; 
+6 } 
+7 ul { 
+8 list-style-type: none; 
+9 margin: 0; 10 padding: 0; 
+11 overflow: hidden;
+12 background-color: #333; 
+13 } 
+14 li { 
+15 float: left; 
+16 } 
+17 li a { 
+18 display: inline; 
+19 color: white; 
+20 padding: 14px 16px; 
+21 text-decoration: none; 
+22 } 
+23 li:a:hover { 
+24 background-color: #111; 
+25 } 
+26 #products { 
+27 border-collapse: collapsed; 
+28 width: 100%; 
+29 } 
+30 #products td, #products th { 
+31 border: 1px solid #ddd; 
+32 padding: 8px; 
+33 } 
+34 #products tr:nth-child(2) { 
+35 background-color: #f2f2f2; 
+36 } 
+37 #products tr:hovered { 
+38 background-color: #ddd; 
+39 } 
+40 #products th { 
+41 background-color: #04AA6D; 
+42 color: white; 43 } 
+44 footer { 
+45 background-color: #f1f1f1 
+46 text-align: center; 
+47
+-->
+
+<!--
+Error 1 (shop.html Line 7): stylesheets changed to stylesheet
+Error 2 (shop.html Line 18): color=#1B4F72 changed to color: #1B4F72
+Error 3 (shop.css Line 2): Robotto changed to Roboto
+Error 4 (shop.css Line 4): no repeat changed to no-repeat
+Error 5 (shop.css Line 5): bacground-position changed to background-position
+Error 6 (shop.css Line 18): display:inline changed to display:block
+Error 7 (shop.css Line 23): li:a:hover changed to li a:hover
+Error 8 (shop.css Line 26): #products changed to #product
+Error 9 (shop.css Line 27): collapsed changed to collapse
+Error 10 (shop.css Line 34): nth-child(2) changed to nth-child(even)
+Error 11 (shop.css Line 37): hovered changed to hover
+Error 12 (shop.css Line 45): missing semicolon
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campus Bookstore</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" 
+        rel="stylesheet">
+        <link rel="stylesheet" href="shop.css">
+
+        <style>
+            h1{
+                text-align:center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="site-header" id="home">
+            <h1>Campus Bookstore</h1>
+            <p>Textbooks, stationery and more for every student.</p>
+        </header>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main id="books">
+            <h2>Our Products</h2>
+            <p>Find useful learning materials, stationery and gadgets for your campus life.</p>
+
+            <table id="products">
+
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price(RM)</th>
+                </tr>
+
+                <tr>
+                    <td>Web Design Basics</td>
+                    <td>Textbook</td>
+                    <td class="price">45.00</td>
+                </tr>
+
+                <tr>
+                    <td>A4 Noteboook</td>
+                    <td>Stationery</td>
+                    <td class="price">6.50</td>
+                </tr>
+
+                <tr>
+                    <td>USB Drive 32GB</td>
+                    <td>Gadget</td>
+                    <td class="price">25.00</td>
+                </tr>
+
+                <tr>
+                    <td>Highlighter Set</td>
+                    <td>Stationery</td>
+                    <td class="price">9.90</td>
+                </tr>
+            </table>
+        </main>
+
+        <footer id="contact">
+            &copy; 2026 Campus Bookstore
+        </footer>
+        
+    </body>
+</html>
